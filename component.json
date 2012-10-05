@@ -1,0 +1,21 @@
+{
+    "name": "suit-button-group",
+    "version": "1.0.0",
+    "author": "Nicolas Gallagher",
+    "styles": [
+        "button-group.css"
+    ],
+    "keywords": [
+        "css",
+        "button",
+        "button group"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/necolas/suit-button-group.git"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+    }]
+}

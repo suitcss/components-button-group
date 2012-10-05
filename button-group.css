@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Button group
+   ========================================================================== */
+
+/**
+ * Create a visual connection between UI actions that belong together.
+ * Must only contain `btn-group__item` objects as children.
+ *
+ * Example HTML:
+ *
+ * <div class="btn-group">
+ *     <div class="btn-group__item">
+ *         <a class="btn" href="#">Dashboard</a>
+ *     </div>
+ *     <div class="btn-group__item">
+ *         <a class="btn" href="#">Account</a>
+ *     </div>
+ *     <div class="btn-group__item">
+ *         <a class="btn" href="#">Logout</a>
+ *     </div>
+ * </div>
+ */
+
+.btn-group {
+    display: inline-block;
+    vertical-align: middle;
+    /* Prevent wrapping across multiple lines */
+    white-space: nowrap;
+    /* Remove inter-unit whitespace for all non-monospace font-families */
+    letter-spacing: -0.31em;
+    word-spacing: -0.43em;
+    /* Protect against WebKit bug with optimizelegibility */
+    text-rendering: optimizespeed;
+}
+
+/**
+ * Ensure that adjacent button borders slide over each other.
+ */
+
+.btn-group__item {
+    display: inline-block;
+    margin-left: -1px;
+    vertical-align: top;
+    /* Reset text defaults */
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-rendering: auto;
+}
+
+.btn-group__item:first-child {
+    margin-left: 0;
+}
+
+/**
+ * Ensure that interactions with a button make it set atop the other buttons in
+ * the group.
+ */
+
+.btn-group__item .btn:hover,
+.btn-group__item .btn:focus,
+.btn-group__item .btn:active,
+.btn-group__item .btn.is-pressed {
+    z-index: 1;
+}
+
+/**
+ * Remove any inappropriate application of button `border-radius` within a
+ * button group.
+ */
+
+.btn-group__item:not(:first-child):not(:last-child) .btn {
+    border-radius: 0;
+}
+
+.btn-group__item:first-child .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group__item:last-child .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
