@@ -81,3 +81,16 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+/**
+ * Modifier: vertically stacked buttons
+ */
+
+.btn-group--vertical .btn-group__item {
+    display: block;
+    margin-left: 0;
+}
+
+.btn-group--vertical .btn {
+    width: 100%;
+}
