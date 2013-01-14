@@ -52,8 +52,8 @@
 }
 
 /**
- * Ensure that interactions with a button make it set atop the other buttons in
- * the group.
+ * Ensure that interactions with a button make it sit on top of other buttons
+ * in the group.
  */
 
 .btn-group__item .btn:hover,
