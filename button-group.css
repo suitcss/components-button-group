@@ -4,50 +4,59 @@
 
 /**
  * Create a visual connection between UI actions that belong together.
- * Must only contain `btn-group__item` objects as children.
+ * Must only contain `ButtonGroup-item` objects as children.
  *
  * Example HTML:
  *
- * <div class="btn-group">
- *     <div class="btn-group__item">
- *         <a class="btn" href="#">Dashboard</a>
+ * <div class="ButtonGroup">
+ *     <div class="ButtonGroup-item">
+ *         <a class="Button" href="#">Dashboard</a>
  *     </div>
- *     <div class="btn-group__item">
- *         <a class="btn" href="#">Account</a>
+ *     <div class="ButtonGroup-item">
+ *         <a class="Button" href="#">Account</a>
  *     </div>
- *     <div class="btn-group__item">
- *         <a class="btn" href="#">Logout</a>
+ *     <div class="ButtonGroup-item">
+ *         <a class="Button" href="#">Logout</a>
  *     </div>
  * </div>
  */
 
-.btn-group {
+/**
+ * Button group
+ *
+ * 1. Prevent wrapping across multiple lines.
+ * 2. Remove inter-unit whitespace for all non-monospace font-families.
+ * 3. Protect against WebKit bug with optimizelegibility
+ */
+
+.ButtonGroup {
     display: inline-block;
     vertical-align: middle;
-    /* Prevent wrapping across multiple lines */
-    white-space: nowrap;
-    /* Remove inter-unit whitespace for all non-monospace font-families */
-    letter-spacing: -0.31em;
-    word-spacing: -0.43em;
-    /* Protect against WebKit bug with optimizelegibility */
-    text-rendering: optimizespeed;
+    white-space: nowrap; /* 1 */
+    letter-spacing: -0.31em; /* 2 */
+    word-spacing: -0.43em; /* 2 */
+    text-rendering: optimizespeed; /* 3 */
 }
 
 /**
- * Ensure that adjacent button borders slide over each other.
+ * Button group item
+ *
+ * 1. Ensure that adjacent button borders slide over each other.
+ * 2. Provide a consistent vertical alignment and avoid vertical whitespace in
+ *    the component.
+ * 3. Reset the text defaults altered in `ButtonGroup`.
  */
 
-.btn-group__item {
+.ButtonGroup-item {
     display: inline-block;
-    margin-left: -1px;
-    vertical-align: top;
-    /* Reset text defaults */
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-rendering: auto;
+    margin-left: -1px; /* 1 */
+    vertical-align: top; /* 2 */
+    letter-spacing: normal; /* 3 */
+    word-spacing: normal; /* 3 */
+    text-rendering: auto; /* 3 */
 }
 
-.btn-group__item:first-child {
+.ButtonGroup-item:first-child {
     margin-left: 0;
 }
 
@@ -56,28 +65,27 @@
  * in the group.
  */
 
-.btn-group__item .btn:hover,
-.btn-group__item .btn:focus,
-.btn-group__item .btn:active,
-.btn-group__item .btn.is-pressed {
+.ButtonGroup-item .Button:hover,
+.ButtonGroup-item .Button:focus,
+.ButtonGroup-item .Button:active,
+.ButtonGroup-item .Button.is-pressed {
     z-index: 1;
 }
 
 /**
- * Remove any inappropriate application of button `border-radius` within a
- * button group.
+ * Remove any `border-radius` where appropriate.
  */
 
-.btn-group__item:not(:first-child):not(:last-child) .btn {
+.ButtonGroup-item:not(:first-child):not(:last-child) .Button {
     border-radius: 0;
 }
 
-.btn-group__item:first-child .btn {
+.ButtonGroup-item:first-child .Button {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.btn-group__item:last-child .btn {
+.ButtonGroup-item:last-child .Button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
