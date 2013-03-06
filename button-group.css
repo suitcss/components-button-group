@@ -25,7 +25,7 @@
  * Button group
  *
  * 1. Prevent wrapping across multiple lines.
- * 2. Remove inter-unit whitespace for all non-monospace font-families.
+ * 2. Remove inter-child whitespace for all non-monospace font-families.
  * 3. Protect against WebKit bug with optimizelegibility
  */
 
@@ -34,8 +34,17 @@
     vertical-align: middle;
     white-space: nowrap; /* 1 */
     letter-spacing: -0.31em; /* 2 */
-    word-spacing: -0.43em; /* 2 */
     text-rendering: optimizespeed; /* 3 */
+}
+
+/**
+ * Hack to remove inter-child whitespace in Opera for Windows. All other
+ * supported browsers will drop the ruleset.
+ */
+
+.opera:-o-prefocus,
+.ButtonGroup {
+    word-spacing: -0.43em;
 }
 
 /**
