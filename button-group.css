@@ -50,7 +50,8 @@
 /**
  * Button group item
  *
- * 1. Ensure that adjacent button borders slide over each other.
+ * 1. Ensure that adjacent button borders slide over each other. Must match the
+ *    value of the button border width.
  * 2. Provide a consistent vertical alignment and avoid vertical whitespace in
  *    the component.
  * 3. Reset the text defaults altered in `ButtonGroup`.

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Button Group [component] - SUIT</title>
+        <link rel="stylesheet" href="button-group.css">
+        <style>
+            .Button {
+                border: 1px solid black;
+                border-radius: 5px;
+                display: inline-block;
+                padding: 5px;
+                position: relative;
+            }
+
+            .Button:hover,
+            .Button:focus,
+            .Button:active {
+                border-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ButtonGroup">
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Dashboard</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Account</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Logout</a>
+            </div>
+        </div>
+    </body>
+</html>
