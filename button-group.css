@@ -24,17 +24,17 @@
 /**
  * Button group
  *
- * 1. Prevent wrapping across multiple lines.
- * 2. Remove inter-child whitespace for all non-monospace font-families.
- * 3. Protect against WebKit bug with optimizelegibility
+ * 1. Remove inter-child whitespace for all non-monospace font-families.
+ * 2. Protect against WebKit bug with optimizelegibility
+ * 3. Prevent wrapping across multiple lines.
  */
 
 .ButtonGroup {
     display: inline-block;
+    letter-spacing: -0.31em; /* 1 */
+    text-rendering: optimizespeed; /* 2 */
     vertical-align: middle;
-    white-space: nowrap; /* 1 */
-    letter-spacing: -0.31em; /* 2 */
-    text-rendering: optimizespeed; /* 3 */
+    white-space: nowrap; /* 3 */
 }
 
 /**
@@ -50,20 +50,20 @@
 /**
  * Button group item
  *
- * 1. Ensure that adjacent button borders slide over each other. Must match the
+ * 1. Reset the text defaults altered in `ButtonGroup`.
+ * 2. Ensure that adjacent button borders slide over each other. Must match the
  *    value of the button border width.
- * 2. Provide a consistent vertical alignment and avoid vertical whitespace in
+ * 3. Provide a consistent vertical alignment and avoid vertical whitespace in
  *    the component.
- * 3. Reset the text defaults altered in `ButtonGroup`.
  */
 
 .ButtonGroup-item {
     display: inline-block;
-    margin-left: -1px; /* 1 */
-    vertical-align: top; /* 2 */
-    letter-spacing: normal; /* 3 */
-    word-spacing: normal; /* 3 */
-    text-rendering: auto; /* 3 */
+    letter-spacing: normal; /* 1 */
+    margin-left: -1px; /* 2 */
+    text-rendering: auto; /* 1 */
+    vertical-align: top; /* 3 */
+    word-spacing: normal; /* 1 */
 }
 
 .ButtonGroup-item:first-child {
@@ -91,11 +91,11 @@
 }
 
 .ButtonGroup-item:first-child .Button {
-    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .ButtonGroup-item:last-child .Button {
-    border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 }
