@@ -83,19 +83,24 @@
 }
 
 /**
- * Remove any `border-radius` where appropriate.
+ * Remove the `border-radius` on adjacent sides of Button descendants.
+ *
+ * We can rely on these pseudo-class selectors because one of the ButtonGroup
+ * requirements is that it only contains ButtonGroup-item as children.
+ *
+ * All browsers that support `border-radius` also support `:not()`.
  */
 
 .ButtonGroup-item:not(:first-child):not(:last-child) .Button {
     border-radius: 0;
 }
 
-.ButtonGroup-item:first-child .Button {
+.ButtonGroup-item:first-child:not(:only-child) .Button {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
 
-.ButtonGroup-item:last-child .Button {
+.ButtonGroup-item:last-child:not(:only-child) .Button {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
