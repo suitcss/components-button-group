@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.1.1 (May 26, 2013)
+
 * Don't remove `border-radius` for lone buttons.
 * Rename `component.json` to `bower.json`.
 
