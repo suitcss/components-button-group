@@ -1,5 +1,7 @@
 === HEAD
 
+* Add `ButtonGroup--vertical` modifier for vertically stacked button groups.
+
 === 1.1.1 (May 26, 2013)
 
 * Don't remove `border-radius` for lone buttons.
