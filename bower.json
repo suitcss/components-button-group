@@ -4,7 +4,11 @@
     "author": "Nicolas Gallagher",
     "main": "button-group.css",
     "ignore": [
+        ".*",
         "CHANGELOG.md",
         "test.html"
-    ]
+    ],
+    "devDependencies": {
+        "suit-button": "~2.0.0"
+    }
 }
