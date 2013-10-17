@@ -2,7 +2,10 @@
     "name": "button-group",
     "repo": "suitcss/button-group",
     "version": "1.2.0",
-    "styles": ["button-group.css"],
+    "styles": [
+        "button-group.css",
+        "button-group.plugin.css"
+    ],
     "author": "Nicolas Gallagher",
     "license": "MIT"
 }
