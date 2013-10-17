@@ -5,6 +5,7 @@
         <title>Button Group [component] - SUIT</title>
         <link rel="stylesheet" href="bower_components/suit-button/button.css">
         <link rel="stylesheet" href="button-group.css">
+        <link rel="stylesheet" href="button-group.plugin.css">
         <style>
             .Button {
                 border: 1px solid black;
@@ -20,14 +21,13 @@
         </style>
     </head>
     <body>
-        <h3>A single item</h3>
+        <h3>ButtonGroup</h3>
         <div class="ButtonGroup">
             <div class="ButtonGroup-item">
                 <a class="Button" href="#">Dashboard</a>
             </div>
         </div>
-
-        <h3>Multiple items</h3>
+        <br>
         <div class="ButtonGroup">
             <div class="ButtonGroup-item">
                 <a class="Button" href="#">Dashboard</a>
@@ -40,8 +40,14 @@
             </div>
         </div>
 
-        <h3>Vertical items</h3>
-        <div class="ButtonGroup ButtonGroup--vertical">
+        <h3>ButtonGroup ButtonGroup--borderCollapse</h3>
+        <div class="ButtonGroup ButtonGroup--borderCollapse">
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Dashboard</a>
+            </div>
+        </div>
+        <br>
+        <div class="ButtonGroup ButtonGroup--borderCollapse">
             <div class="ButtonGroup-item">
                 <a class="Button" href="#">Dashboard</a>
             </div>
@@ -52,5 +58,44 @@
                 <a class="Button" href="#">Logout</a>
             </div>
         </div>
+
+        <h3>ButtonGroup ButtonGroup--hz</h3>
+        <div class="ButtonGroup ButtonGroup--hz">
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Dashboard</a>
+            </div>
+        </div>
+        <br>
+        <div class="ButtonGroup ButtonGroup--hz">
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Dashboard</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Account</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Logout</a>
+            </div>
+        </div>
+
+        <h3>ButtonGroup ButtonGroup--hz ButtonGroup--hzBorderCollapse</h3>
+        <div class="ButtonGroup ButtonGroup--hz ButtonGroup--borderCollapse">
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Dashboard</a>
+            </div>
+        </div>
+        <br>
+        <div class="ButtonGroup ButtonGroup--hz ButtonGroup--borderCollapse">
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Dashboard</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Account</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#">Logout</a>
+            </div>
+        </div>
+
     </body>
 </html>

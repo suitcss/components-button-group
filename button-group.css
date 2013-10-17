@@ -8,7 +8,7 @@
  *
  * Example HTML:
  *
- * <div class="ButtonGroup">
+ * <div class="ButtonGroup [ButtonGroup--hz]">
  *     <div class="ButtonGroup-item">
  *         <a class="Button" href="#">Dashboard</a>
  *     </div>
@@ -24,50 +24,30 @@
 /**
  * Button group
  *
- * 1. Remove inter-child whitespace for all non-monospace font-families.
- * 2. Protect against WebKit bug with optimizelegibility
- * 3. Prevent wrapping across multiple lines.
+ * 1. Ensure component is full-width if applied to elements that are
+ *    `inline-block` by default.
+ * 2. Collapse whitespace between child elements. Only necessary for the
+ *    `ButtonGroup--hz` modifier which lays items out as `inline-block`, but
+ *    included in the base component so that affects on `font-size` are
+ *    consistent.
  */
 
 .ButtonGroup {
-    display: inline-block;
-    letter-spacing: -0.31em; /* 1 */
-    text-rendering: optimizespeed; /* 2 */
-    vertical-align: middle;
-    white-space: nowrap; /* 3 */
-}
-
-/**
- * Hack to remove inter-child whitespace in Opera for Windows. All other
- * supported browsers will drop the ruleset.
- */
-
-.opera:-o-prefocus,
-.ButtonGroup {
-    word-spacing: -0.43em;
+    display: block; /* 1 */
+    font-size: 0; /* 2 */
 }
 
 /**
  * Button group item
  *
- * 1. Reset the text defaults altered in `ButtonGroup`.
- * 2. Ensure that adjacent button borders slide over each other. Must match the
- *    value of the button border width.
- * 3. Provide a consistent vertical alignment and avoid vertical whitespace in
- *    the component.
+ * 1. Make it full-width if applied to elements that are `inline-block` by
+ *    default.
+ * 2. Reset the font size of the buttons to the root font size.
  */
 
 .ButtonGroup-item {
-    display: inline-block;
-    letter-spacing: normal; /* 1 */
-    margin-left: -1px; /* 2 */
-    text-rendering: auto; /* 1 */
-    vertical-align: top; /* 3 */
-    word-spacing: normal; /* 1 */
-}
-
-.ButtonGroup-item:first-child {
-    margin-left: 0;
+    display: block; /* 1 */
+    font-size: 1rem; /* 2 */
 }
 
 /**
@@ -82,60 +62,16 @@
     z-index: 1;
 }
 
-/* Modifier: vertically stacked buttons
-   ========================================================================== */
 
-.ButtonGroup--vertical .ButtonGroup-item {
-    display: block;
-    margin-left: 0;
-    margin-top: -1px;
-}
-
-.ButtonGroup--vertical .Button {
-    display: block;
-    width: 100%;
-}
-
-/* Plugin: remove border radius from adjacent sides of `Button`
+/* Modifier: horizontal buttons
    ========================================================================== */
 
 /**
- * Remove the `border-radius` on adjacent sides of `Button` descendants.
- *
- * We can rely on these pseudo-class selectors because one of the `ButtonGroup`
- * requirements is that it only contains `ButtonGroup-item` as children.
- *
- * All browsers that support `border-radius` also support `:not()`.
+ * 1. Provide a consistent vertical alignment and avoid vertical whitespace in
+ *    the component.
  */
 
-.ButtonGroup:not(.ButtonGroup--vertical) .ButtonGroup-item:not(:first-child):not(:last-child) .Button {
-    border-radius: 0;
-}
-
-.ButtonGroup:not(.ButtonGroup--vertical) .ButtonGroup-item:first-child:not(:only-child) .Button {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.ButtonGroup:not(.ButtonGroup--vertical) .ButtonGroup-item:last-child:not(:only-child) .Button {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-
-/**
- * Appropriate removal of `border-radius` for vertically stacked buttons.
- */
-
-.ButtonGroup--vertical .ButtonGroup-item:not(:first-child):not(:last-child) .Button {
-    border-radius: 0;
-}
-
-.ButtonGroup--vertical .ButtonGroup-item:first-child:not(:only-child) .Button {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.ButtonGroup--vertical .ButtonGroup-item:last-child:not(:only-child) .Button {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.ButtonGroup--hz > .ButtonGroup-item {
+    display: inline-block;
+    vertical-align: top; /* 1 */
 }
