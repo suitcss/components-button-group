@@ -1,5 +1,7 @@
 === HEAD
 
+* Add CSS linting and configuration.
+
 === 1.2.0 (August 25, 2013)
 
 * Add `ButtonGroup--vertical` modifier for vertically stacked button groups.
