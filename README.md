@@ -8,14 +8,20 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-button-group`
-* Download: [zip](https://github.com/necolas/suit-button-group/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-button-group.git`
+* Download: [zip](https://github.com/suitcss/button-group/zipball/master)
+* Git: `git clone https://github.com/suitcss/button-group.git`
 
 ## Available classes
 
-* `ButtonGroup` - The wrapper component around a group of `ButtonGroup-item`
-  components.
-* `ButtonGroup-item` - A `ButtonGroup` sub-object used to contain other nodes.
+* `ButtonGroup` - The core component.
+* `ButtonGroup--hz` - Horizontally arranged buttons.
+* `ButtonGroup-item` - A `ButtonGroup` sub-object used to contain buttons.
+
+### Plugins
+
+The `button-group.plugins.css` file provides the following classes:
+
+* `ButtonGroup--borderCollapse` - Collapse the borders between buttons.
 
 ## Usage
 
@@ -35,10 +41,10 @@ menus.
     <div class="ButtonGroup-item">
         <a class="Button" href="#">Settings</a>
     </div>
-    <div class="ButtonGroup-item with-Dropdown">
+    <div class="ButtonGroup-item js-dropdownContainer">
         <a class="Button js-dropdownToggle" href="#">
             Account
-            <i class="Icon Icon--caret"></i>
+            <span class="Icon Icon--caret"></span>
         </a>
         <div class="Dropdown">
             ...
@@ -47,37 +53,41 @@ menus.
 </div>
 ```
 
-This component should intelligently remove certain `border-radius` values from
-your application-level button theme.
-
 ## Customising
 
 Your application-level CSS can build upon this component.
 
 If your app's button theme uses a border width other than `1px`, you can adjust the
 button group component to accommodate this. For example, if your buttons used
-3px borders, you would add this rule to your application-level CSS:
-
-```css
-.ButtonGroup-item {
-    margin-left: -3px;
-}
-```
-
-If you need to adjust the space between buttons, or buttons and button groups,
-or multiple button groups, you might want to add a rule like this to your
-application-level CSS:
+3px borders, you would add this code to your application's `button-group.css` file:
 
 ```css
 /**
- * Add some space between adjacent .btn and .btn-group components
+ * Override default `ButtonGroup--borderCollapse`
  */
 
-.Button + .Button,
-.Button + .ButtonGroup,
-.ButtonGroup + .Button,
-.ButtonGroup + .ButtonGroup {
-    margin-left: 5px;
+.ButtonGroup--borderCollapse.ButtonGroup--hz .ButtonGroup-item {
+    margin-left: -3px;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) .ButtonGroup-item {
+    margin-top: -3px;
+}
+```
+
+Or if you have buttons with different width borders, you could create new modifiers.
+
+```css
+/**
+ * Use with `ButtonGroup--borderCollapse`
+ */
+
+.ButtonGroup--borderCollapse10px.ButtonGroup--hz .ButtonGroup-item {
+    margin-left: -10px;
+}
+
+.ButtonGroup--borderCollapse10px:not(.ButtonGroup--hz) .ButtonGroup-item {
+    margin-top: -10px;
 }
 ```
 
@@ -87,4 +97,4 @@ application-level CSS:
 * Opera (latest)
 * Firefox 4+
 * Safari 5+
-* Internet Explorer 8+
+* Internet Explorer 9+
