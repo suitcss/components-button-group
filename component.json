@@ -1,11 +1,15 @@
 {
-    "name": "button-group",
-    "repo": "suitcss/button-group",
-    "version": "1.2.0",
-    "styles": [
-        "button-group.css",
-        "button-group.plugin.css"
-    ],
-    "author": "Nicolas Gallagher",
-    "license": "MIT"
+  "name": "button-group",
+  "repo": "suitcss/button-group",
+  "version": "1.2.0",
+  "styles": [
+    "button-group.css",
+    "button-group.plugin.css"
+  ],
+  "devDependencies": {
+    "suitcss/button": "~3.0.0",
+    "suitcss/test": "~0.1.0"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
 }
