@@ -1,5 +1,6 @@
 === HEAD
 
+* Rewrite the tests using 'suit-test'.
 * Provide "border collapse" presentation with `ButtonGroup--borderCollapse` modifier, via a plugin file.
 * Rewrite the component to be vertical by default.
 * Use `font-size:0` to squash whitespace.

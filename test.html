@@ -1,101 +1,108 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Button Group [component] - SUIT</title>
-        <link rel="stylesheet" href="bower_components/suit-button/button.css">
-        <link rel="stylesheet" href="button-group.css">
-        <link rel="stylesheet" href="button-group.plugin.css">
-        <style>
-            .Button {
-                border: 1px solid black;
-                border-radius: 5px;
-                padding: 5px;
-            }
+<meta charset="utf-8">
+<title>Button Group [component] - SUIT</title>
+<link rel="stylesheet" href="bower_components/suit-test/test.css">
+<link rel="stylesheet" href="bower_components/suit-button/button.css">
+<link rel="stylesheet" href="button-group.css">
+<link rel="stylesheet" href="button-group.plugin.css">
+<style>
+    .Test-run .Button:hover,
+    .Test-run .Button:focus,
+    .Test-run .Button:active {
+        border-color: red;
+    }
 
-            .Button:hover,
-            .Button:focus,
-            .Button:active {
-                border-color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <h3>ButtonGroup</h3>
+    .Test-run--withBorderRadius .Button {
+        border-radius: 5px;
+    }
+</style>
+
+<div class="Test">
+    <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/button-group">ButtonGroup</a> component tests</h1>
+
+    <h2 class="Test-describe">.ButtonGroup</h2>
+
+    <h3 class="Test-it">renders vertically and full-width</h3>
+    <div class="Test-run" id="renders">
         <div class="ButtonGroup">
             <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
+                <a class="Button" href="#non">Dashboard</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Account</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Logout</a>
             </div>
         </div>
-        <br>
-        <div class="ButtonGroup">
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Account</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Logout</a>
-            </div>
-        </div>
+    </div>
 
-        <h3>ButtonGroup ButtonGroup--borderCollapse</h3>
-        <div class="ButtonGroup ButtonGroup--borderCollapse">
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
-            </div>
-        </div>
-        <br>
-        <div class="ButtonGroup ButtonGroup--borderCollapse">
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Account</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Logout</a>
-            </div>
-        </div>
+    <h2 class="Test-describe">.ButtonGroup .ButtonGroup--hz</h2>
 
-        <h3>ButtonGroup ButtonGroup--hz</h3>
+    <h3 class="Test-it">renders horizontally and buttons shrink wrap</h3>
+    <div class="Test-run" id="rendersHz">
         <div class="ButtonGroup ButtonGroup--hz">
             <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
+                <a class="Button" href="#non">Dashboard</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Account</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Logout</a>
             </div>
         </div>
-        <br>
+    </div>
+
+    <h2 class="Test-describe">.ButtonGroup .ButtonGroup--borderCollapse (requires plugin)</h2>
+
+    <h3 class="Test-it">overlaps adjacent borders, removes border-radius from adjacent borders, places the active button on top</h3>
+    <div class="Test-run Test-run--withBorderRadius" id="borderCollapse-renders">
+        <div class="ButtonGroup ButtonGroup--borderCollapse">
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Dashboard</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Account</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="Test-it">doesn't have an affect on single-item groups</h3>
+    <div class="Test-run Test-run--withBorderRadius" id="borderCollapse-single">
         <div class="ButtonGroup ButtonGroup--hz">
             <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Account</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Logout</a>
+                <a class="Button" href="#non">Dashboard</a>
             </div>
         </div>
+    </div>
 
-        <h3>ButtonGroup ButtonGroup--hz ButtonGroup--hzBorderCollapse</h3>
+    <h2 class="Test-describe">.ButtonGroup .ButtonGroup--hz .ButtonGroup--borderCollapse (requires plugin)</h2>
+
+    <h3 class="Test-it">overlaps adjacent borders, removes border-radius from adjacent borders, places the active button on top</h3>
+    <div class="Test-run Test-run--withBorderRadius" id="hz-borderCollapse-renders">
         <div class="ButtonGroup ButtonGroup--hz ButtonGroup--borderCollapse">
             <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
+                <a class="Button" href="#non">Dashboard</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Account</a>
+            </div>
+            <div class="ButtonGroup-item">
+                <a class="Button" href="#non">Logout</a>
             </div>
         </div>
-        <br>
+    </div>
+
+    <h3 class="Test-it">doesn't have an affect on single-item groups</h3>
+    <div class="Test-run Test-run--withBorderRadius" id="hz-borderCollapse-single">
         <div class="ButtonGroup ButtonGroup--hz ButtonGroup--borderCollapse">
             <div class="ButtonGroup-item">
-                <a class="Button" href="#">Dashboard</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Account</a>
-            </div>
-            <div class="ButtonGroup-item">
-                <a class="Button" href="#">Logout</a>
+                <a class="Button" href="#non">Dashboard</a>
             </div>
         </div>
-
-    </body>
-</html>
+    </div>
+</div>
