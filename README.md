@@ -8,6 +8,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-button-group`
+* [Component(1)](http://component.io/): `component install suitcss/button-group`
 * Download: [zip](https://github.com/suitcss/button-group/zipball/master)
 * Git: `git clone https://github.com/suitcss/button-group.git`
 
@@ -23,14 +24,14 @@ The `button-group.plugins.css` file provides the following classes:
 
 * `ButtonGroup--borderCollapse` - Collapse the borders between buttons.
 
-## Usage
+## Use
 
 An element with the `ButtonGroup` class must be used to wrap a collection of
 elements with the `ButtonGroup-item` class. The `ButtonGroup` component *must*
 only contain `ButtonGroup-item` components as children.
 
 The button group items may contain other components, e.g., [SUIT
-button](https://github.com/necolas/suit-button) or buttons with dropdown
+button](https://github.com/suitcss/button) or buttons with dropdown
 menus.
 
 ```html
@@ -56,6 +57,16 @@ menus.
 ## Customising
 
 Your application-level CSS can build upon this component.
+
+```css
+/**
+ * Override default `ButtonGroup--borderCollapse`
+ */
+
+.ButtonGroup--alignMiddle > .ButtonGroup-item {
+    vertical-align: middle;
+}
+```
 
 If your app's button theme uses a border width other than `1px`, you can adjust the
 button group component to accommodate this. For example, if your buttons used
