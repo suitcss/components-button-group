@@ -1,2 +1,3 @@
-bower_components
+**/*.json
+**/*.md
 node_modules
