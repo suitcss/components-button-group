@@ -1,7 +1,7 @@
 {
   "name": "button-group",
   "repo": "suitcss/button-group",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "styles": [
     "button-group.css",
     "button-group.plugin.css"

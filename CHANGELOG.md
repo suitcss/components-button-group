@@ -1,5 +1,7 @@
 === HEAD
 
+=== 2.0.0 (October 19, 2013)
+
 * Rewrite the tests using 'suit-test'.
 * Provide "border collapse" presentation with `ButtonGroup--borderCollapse` modifier, via a plugin file.
 * Rewrite the component to be vertical by default.
