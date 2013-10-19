@@ -60,7 +60,7 @@ Your application-level CSS can build upon this component.
 
 ```css
 /**
- * Override default `ButtonGroup--borderCollapse`
+ * Override default the `ButtonGroup-item` vertical alignment.
  */
 
 .ButtonGroup--alignMiddle > .ButtonGroup-item {
