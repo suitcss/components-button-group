@@ -102,6 +102,25 @@ Or if you have buttons with different width borders, you could create new modifi
 }
 ```
 
+## Testing
+
+Install [Node](http://nodejs.org) (comes with npm) and [Component(1)](http://component.io).
+
+From the repo root, install the project's development dependencies:
+
+```
+component install
+npm install
+```
+
+Basic visual tests are in `test.html`.
+
+To run the CSS Lint tests:
+
+```
+npm test
+```
+
 ## Browser support
 
 * Google Chrome (latest)
