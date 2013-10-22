@@ -109,17 +109,23 @@ Install [Node](http://nodejs.org) (comes with npm) and [Component(1)](http://com
 From the repo root, install the project's development dependencies:
 
 ```
-component install
+component install --dev
 npm install
 ```
-
-Basic visual tests are in `test.html`.
 
 To run the CSS Lint tests:
 
 ```
 npm test
 ```
+
+To build the front-end development bundle:
+
+```
+component build --dev
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
