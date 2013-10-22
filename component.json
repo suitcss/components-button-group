@@ -6,9 +6,9 @@
     "button-group.css",
     "button-group.plugin.css"
   ],
-  "devDependencies": {
-    "suitcss/button": "~3.0.0",
-    "suitcss/test": "~0.1.0"
+  "development": {
+    "suitcss/button": "v3.0.0",
+    "suitcss/test": "v0.1.0"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"

@@ -14,7 +14,7 @@
     "test.html"
   ],
   "devDependencies": {
-    "suit-button": "~3.0.0",
-    "suit-test": "~0.1.0"
+    "suit-button": "3.0.0",
+    "suit-test": "0.1.0"
   }
 }
