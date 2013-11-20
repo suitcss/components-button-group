@@ -3,7 +3,7 @@
 A SUIT component for creating a visual connection between UI buttons that
 belong together.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
@@ -104,25 +104,20 @@ Or if you have buttons with different width borders, you could create new modifi
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm) and [Component(1)](http://component.io).
+Install [Node](http://nodejs.org) (comes with npm). It's recommended that you
+also globally install [Component(1)](http://component.io): `npm install -g
+component`.
 
 From the repo root, install the project's development dependencies:
 
 ```
-component install --dev
-npm install
+make
 ```
 
-To run the CSS Lint tests:
+To run the CSS Lint tests and build the front-end development bundle:
 
 ```
-npm test
-```
-
-To build the front-end development bundle:
-
-```
-component build --dev
+make test
 ```
 
 Basic visual tests are in `test.html`.

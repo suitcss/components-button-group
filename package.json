@@ -4,6 +4,7 @@
   "description": "",
   "version": "2.0.0",
   "devDependencies": {
+    "component": "*",
     "csslint": ">=0.9.10"
   },
   "scripts": {
