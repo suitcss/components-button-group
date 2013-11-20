@@ -1,0 +1,300 @@
+/*! suit-button v3.0.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   SUIT: Button
+   ========================================================================== */
+
+/**
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ *
+ * Recommended use:
+ *
+ * <a class="Button [Button--modifier]" role="button" href="[url]">Button text</a>
+ * <button class="Button [Button--modifier]" type="submit">Button text</button>
+ * <input class="Button [Button--modifier]" type="submit" value="Button text">
+ */
+
+/**
+ * Button template
+ *
+ * Build on this component using rulesets in your application-level CSS.
+ *
+ * 1. Corrects inability to style clickable `input` types in iOS
+ * 2. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 3. Inherit text color from ancestor.
+ * 4. Take up the full width of the parent context.
+ * 5. Inherit font styles from ancestor.
+ * 6. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
+ * 7. Prevent button text from being selectable.
+ * 8. Make sure `input` will wrap text across multiple lines.
+ */
+
+.Button {
+    -webkit-appearance: none; /* 1 */
+    background: transparent;
+    border: 1px solid;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; /* 2 */
+    color: inherit; /* 3 */
+    cursor: pointer;
+    display: block; /* 4 */
+    font: inherit; /* 5 */
+    line-height: normal; /* 6 */
+    margin: 0;
+    padding: 0.4em 0.75em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; /* 7 */
+    white-space: normal; /* 8 */
+    width: 100%; /* 4 */
+}
+
+/**
+ * UI states
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+    text-decoration: none;
+}
+
+.Button:disabled,
+.Button.is-disabled {
+    cursor: default;
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*! suit-test v0.1.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   SUIT: Test
+   ========================================================================== */
+
+/**
+ * The 'describe' CSS counter
+ */
+
+.Test {
+    counter-reset: test-describe;
+}
+
+.Test-describe:before {
+    content: counter(test-describe);
+    counter-increment: test-describe;
+}
+
+/**
+ * The 'it' CSS counter
+ */
+
+.Test-describe {
+    counter-reset: test-it;
+}
+
+.Test-it:before {
+    content: counter(test-describe) "." counter(test-it);
+    counter-increment: test-it;
+}
+
+/**
+ * The test title
+ */
+
+.Test-title {
+    font-size: 2em;
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 20px 0;
+    background: #eee;
+    color: #999;
+}
+
+/**
+ * The test description and expectation titles
+ */
+
+.Test-describe,
+.Test-it {
+    background: #eee;
+    border-left: 5px solid #666;
+    color: #666;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0.75em 20px;
+}
+
+.Test-describe {
+    font-size: 1.5em;
+    margin: 60px 0 20px;
+}
+
+.Test-describe:before,
+.Test-it:before {
+    color: #999;
+    display: inline-block;
+    margin-right: 10px;
+    min-width: 30px;
+    text-transform: uppercase;
+}
+
+/*! suit-button-group v2.0.1 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   SUIT: Button group
+   ========================================================================== */
+
+/**
+ * Create a visual connection between UI actions that belong together.
+ * Must only contain `ButtonGroup-item` objects as children.
+ *
+ * Example HTML:
+ *
+ * <div class="ButtonGroup [ButtonGroup--hz]">
+ *     <div class="ButtonGroup-item">
+ *         <a class="Button" href="#">Dashboard</a>
+ *     </div>
+ *     <div class="ButtonGroup-item">
+ *         <a class="Button" href="#">Account</a>
+ *     </div>
+ *     <div class="ButtonGroup-item">
+ *         <a class="Button" href="#">Logout</a>
+ *     </div>
+ * </div>
+ */
+
+/**
+ * Button group
+ *
+ * 1. Ensure component is full-width if applied to elements that are
+ *    `inline-block` by default.
+ * 2. Collapse whitespace between child elements. Only necessary for the
+ *    `ButtonGroup--hz` modifier which lays items out as `inline-block`, but
+ *    included in the base component so that affects on `font-size` are
+ *    consistent.
+ * 3. Remove any default styles that might be present when `ol` or `ul` are the
+ *    root element.
+ */
+
+.ButtonGroup {
+    display: block; /* 1 */
+    font-size: 0; /* 2 */
+    margin: 0; /* 3 */
+    list-style: none; /* 3 */
+    padding: 0; /* 3 */
+}
+
+/**
+ * Button group item
+ *
+ * 1. Make it full-width if applied to elements that are `inline-block` by
+ *    default.
+ * 2. Reset the font size of the buttons to the root font size.
+ */
+
+.ButtonGroup-item {
+    display: block; /* 1 */
+    font-size: 1rem; /* 2 */
+}
+
+/**
+ * Ensure that interactions with a button make it sit on top of other buttons
+ * in the group.
+ */
+
+.ButtonGroup-item .Button:hover,
+.ButtonGroup-item .Button:focus,
+.ButtonGroup-item .Button:active,
+.ButtonGroup-item .Button.is-pressed {
+    z-index: 1;
+}
+
+
+/* Modifier: horizontal buttons
+   ========================================================================== */
+
+.ButtonGroup--hz > .ButtonGroup-item {
+    display: inline-block;
+}
+
+/*! suit-button-group v2.0.1 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   Button group (plugin)
+   ========================================================================== */
+
+/* Modifier: collapse button borders
+   ========================================================================== */
+
+/**
+ * Includes appropriate removal of `border-radius`.
+ * All browsers that support `border-radius` also support CSS 3 pseudo-classes.
+ */
+
+/**
+ * Vertical collapse
+ */
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
+    margin-top: -1px;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
+    margin-top: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+    border-radius: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/**
+ * Horizontal collapse
+ */
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
+    margin-left: -1px;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
+    margin-left: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+    border-radius: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
