@@ -1,6 +1,6 @@
 {
   "name": "suit-button-group",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Nicolas Gallagher",
   "main": [
     "button-group.css",
