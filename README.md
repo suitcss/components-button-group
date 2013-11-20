@@ -54,6 +54,29 @@ menus.
 </div>
 ```
 
+or
+
+```html
+<ul class="ButtonGroup">
+    <li class="ButtonGroup-item">
+        <a class="Button" href="#">Dashboard</a>
+    </li>
+    <li class="ButtonGroup-item">
+        <a class="Button" href="#">Settings</a>
+    </li>
+    <li class="ButtonGroup-item js-dropdownContainer">
+        <a class="Button js-dropdownToggle" href="#">
+            Account
+            <span class="Icon Icon--caret"></span>
+        </a>
+        <div class="Dropdown">
+            ...
+        </div>
+    </li>
+</ul>
+```
+
+
 ## Customising
 
 Your application-level CSS can build upon this component.

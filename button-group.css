@@ -32,11 +32,16 @@
  *    `ButtonGroup--hz` modifier which lays items out as `inline-block`, but
  *    included in the base component so that affects on `font-size` are
  *    consistent.
+ * 3. Remove any default styles that might be present when `ol` or `ul` are the
+ *    root element.
  */
 
 .ButtonGroup {
     display: block; /* 1 */
     font-size: 0; /* 2 */
+    margin: 0; /* 3 */
+    list-style: none; /* 3 */
+    padding: 0; /* 3 */
 }
 
 /**
