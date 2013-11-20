@@ -32,14 +32,11 @@
  *    `ButtonGroup--hz` modifier which lays items out as `inline-block`, but
  *    included in the base component so that affects on `font-size` are
  *    consistent.
- * 3. Provide a consistent vertical alignment and avoid vertical whitespace in
- *    the component.
  */
 
 .ButtonGroup {
     display: block; /* 1 */
     font-size: 0; /* 2 */
-    vertical-align: top; /* 1 */
 }
 
 /**
