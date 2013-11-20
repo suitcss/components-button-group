@@ -1,20 +1,24 @@
 {
   "name": "suit-button-group",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Nicolas Gallagher",
   "main": [
     "button-group.css",
     "button-group.plugin.css"
   ],
+  "devDependencies": {
+    "suit-button": "~3.0.0",
+    "suit-test": "~0.1.0"
+  },
   "ignore": [
+    "build",
+    "components",
+    "test",
     ".*",
+    "Makefile",
     "CHANGELOG.md",
     "component.json",
     "package.json",
     "test.html"
-  ],
-  "devDependencies": {
-    "suit-button": "~3.0.0",
-    "suit-test": "~0.1.0"
-  }
+  ]
 }
