@@ -1,5 +1,9 @@
 === HEAD
 
+* Normalize styles when a list element is the component root.
+* Remove used `vertical-align` declaration.
+* Fix Component(1) configuration and setup.
+
 === 2.0.0 (October 19, 2013)
 
 * Rewrite the tests using 'suit-test'.
