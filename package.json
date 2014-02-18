@@ -1,8 +1,12 @@
 {
-  "name": "suit-button-group",
-  "private": true,
+  "name": "suit-component-button-group",
   "description": "",
   "version": "2.0.1",
+  "style": "button-group.css",
+  "files": [
+    "button-group.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "*",
     "csslint": ">=0.9.10"
