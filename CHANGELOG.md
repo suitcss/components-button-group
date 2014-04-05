@@ -1,5 +1,7 @@
 === HEAD
 
+=== 2.1.0 (April 5, 2014)
+
 * Depend on 'suitcss-components-button'.
 * Add npm support.
 
