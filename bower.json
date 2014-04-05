@@ -6,9 +6,8 @@
     "button-group.css",
     "button-group.plugin.css"
   ],
-  "devDependencies": {
-    "suit-button": "~3.0.0",
-    "suit-test": "~0.1.0"
+  "dependencies": {
+    "suit-components-button": "*"
   },
   "ignore": [
     "build",
