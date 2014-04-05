@@ -1,8 +1,10 @@
+/** @define ButtonGroup */
+
 /*! suit-button-group v2.0.1 | MIT License | github.com/suitcss */
 
-/* ==========================================================================
-   SUIT: Button group
-   ========================================================================== */
+:root {
+  var-font-size-ButtonGroup: 1rem;
+}
 
 /**
  * Create a visual connection between UI actions that belong together.
@@ -54,7 +56,12 @@
 
 .ButtonGroup-item {
   display: block; /* 1 */
-  font-size: 1rem; /* 2 */
+  font-size: var(font-size-ButtonGroup); /* 2 */
+}
+
+.ButtonGroup-item > .Button {
+  display: block;
+  width: 100%;
 }
 
 /**
@@ -62,10 +69,10 @@
  * in the group.
  */
 
-.ButtonGroup-item .Button:hover,
-.ButtonGroup-item .Button:focus,
-.ButtonGroup-item .Button:active,
-.ButtonGroup-item .Button.is-pressed {
+.ButtonGroup-item > .Button:hover,
+.ButtonGroup-item > .Button:focus,
+.ButtonGroup-item > .Button:active,
+.ButtonGroup-item > .Button.is-pressed {
   z-index: 1;
 }
 
