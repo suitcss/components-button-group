@@ -1,8 +1,6 @@
-/*! suit-button-group v2.0.1 | MIT License | github.com/suitcss */
+/** @define ButtonGroup */
 
-/* ==========================================================================
-   Button group (plugin)
-   ========================================================================== */
+/*! suit-button-group v2.1.0 | MIT License | github.com/suitcss */
 
 /* Modifier: collapse button borders
    ========================================================================== */
@@ -17,25 +15,25 @@
  */
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
-    margin-top: -1px;
+  margin-top: calc(var(border-width-Button) * -1px);
 }
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /**
@@ -43,23 +41,23 @@
  */
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
-    margin-left: -1px;
+  margin-left: calc(var(border-width-Button) * -1px);
 }
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }

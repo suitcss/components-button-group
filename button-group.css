@@ -1,8 +1,10 @@
-/*! suit-button-group v2.0.1 | MIT License | github.com/suitcss */
+/** @define ButtonGroup */
 
-/* ==========================================================================
-   SUIT: Button group
-   ========================================================================== */
+/*! suit-button-group v2.1.0 | MIT License | github.com/suitcss */
+
+:root {
+  var-font-size-ButtonGroup: 1rem;
+}
 
 /**
  * Create a visual connection between UI actions that belong together.
@@ -11,15 +13,15 @@
  * Example HTML:
  *
  * <div class="ButtonGroup [ButtonGroup--hz]">
- *     <div class="ButtonGroup-item">
- *         <a class="Button" href="#">Dashboard</a>
- *     </div>
- *     <div class="ButtonGroup-item">
- *         <a class="Button" href="#">Account</a>
- *     </div>
- *     <div class="ButtonGroup-item">
- *         <a class="Button" href="#">Logout</a>
- *     </div>
+ *   <div class="ButtonGroup-item">
+ *     <a class="Button" href="#">Dashboard</a>
+ *   </div>
+ *   <div class="ButtonGroup-item">
+ *     <a class="Button" href="#">Account</a>
+ *   </div>
+ *   <div class="ButtonGroup-item">
+ *     <a class="Button" href="#">Logout</a>
+ *   </div>
  * </div>
  */
 
@@ -37,11 +39,11 @@
  */
 
 .ButtonGroup {
-    display: block; /* 1 */
-    font-size: 0; /* 2 */
-    margin: 0; /* 3 */
-    list-style: none; /* 3 */
-    padding: 0; /* 3 */
+  display: block; /* 1 */
+  font-size: 0; /* 2 */
+  margin: 0; /* 3 */
+  list-style: none; /* 3 */
+  padding: 0; /* 3 */
 }
 
 /**
@@ -53,8 +55,13 @@
  */
 
 .ButtonGroup-item {
-    display: block; /* 1 */
-    font-size: 1rem; /* 2 */
+  display: block; /* 1 */
+  font-size: var(font-size-ButtonGroup); /* 2 */
+}
+
+.ButtonGroup-item > .Button {
+  display: block;
+  width: 100%;
 }
 
 /**
@@ -62,11 +69,11 @@
  * in the group.
  */
 
-.ButtonGroup-item .Button:hover,
-.ButtonGroup-item .Button:focus,
-.ButtonGroup-item .Button:active,
-.ButtonGroup-item .Button.is-pressed {
-    z-index: 1;
+.ButtonGroup-item > .Button:hover,
+.ButtonGroup-item > .Button:focus,
+.ButtonGroup-item > .Button:active,
+.ButtonGroup-item > .Button.is-pressed {
+  z-index: 1;
 }
 
 
@@ -74,5 +81,5 @@
    ========================================================================== */
 
 .ButtonGroup--hz > .ButtonGroup-item {
-    display: inline-block;
+  display: inline-block;
 }

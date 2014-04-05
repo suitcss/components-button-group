@@ -1,5 +1,10 @@
 === HEAD
 
+=== 2.1.0 (April 5, 2014)
+
+* Depend on 'suitcss-components-button'.
+* Add npm support.
+
 === 2.0.1 (November 20, 2013)
 
 * Normalize styles when a list element is the component root.
