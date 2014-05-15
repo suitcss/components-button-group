@@ -7,7 +7,7 @@
     "button-group.plugin.css"
   ],
   "dependencies": {
-    "suit-components-button": "*"
+    "suit-components-button": ">=3.2.0"
   },
   "ignore": [
     "build",

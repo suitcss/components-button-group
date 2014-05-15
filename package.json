@@ -9,7 +9,7 @@
     "component.json"
   ],
   "dependencies": {
-    "suitcss-components-button": "*"
+    "suitcss-components-button": ">=3.2.0"
   },
   "devDependencies": {
     "component": "0.19.x",
