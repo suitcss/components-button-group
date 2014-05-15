@@ -1,5 +1,7 @@
 === HEAD
 
+=== 2.2.0 (May 15, 2014)
+
 * Update variables syntax.
 
 === 2.1.0 (April 5, 2014)

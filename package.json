@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components-button-group",
   "description": "CSS to group Button components",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "style": "button-group.css",
   "files": [
     "button-group.css",
