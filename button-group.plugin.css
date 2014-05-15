@@ -15,7 +15,7 @@
  */
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
-  margin-top: calc(var(border-width-Button) * -1px);
+  margin-top: calc(var(--border-width-Button) * -1px);
 }
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
@@ -41,7 +41,7 @@
  */
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
-  margin-left: calc(var(border-width-Button) * -1px);
+  margin-left: calc(var(--border-width-Button) * -1px);
 }
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child {

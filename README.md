@@ -22,7 +22,7 @@ The plugin file provides the following classes:
 
 ## Configurable variables
 
-* `var-font-size-ButtonGroup` - The font-size to use. Defaults to `1rem`.
+* `--font-size-ButtonGroup` - The font-size to use. Defaults to `1rem`.
 
 ## Use
 
