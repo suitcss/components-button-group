@@ -1,4 +1,4 @@
-# SUIT ButtonGroup
+# SUIT ButtonGroup (DEPRECATED)
 
 CSS for visually grouping buttons.
 
